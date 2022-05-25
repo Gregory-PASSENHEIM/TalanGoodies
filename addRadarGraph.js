@@ -19,20 +19,23 @@ function addGraphToProfile(event) {
 		myInnerHTML += "			    <!--START001-->" + candidateInfo.innerHTML + "<!--STOP001-->";
 		myInnerHTML += "			</td>";
 		myInnerHTML += "		    <td>B";
-		myInnerHTML += "				<div id='chartIsHere' style='height: 200px; border:1px solid black;'>";
-		myInnerHTML += "					<script>";
-		myInnerHTML += "					    console.log('!! ON Y EST !!');";
-		//myInnerHTML += "						google.charts.load('upcoming', {'packages': ['vegachart']}).then(addChartHere);";
-		//myInnerHTML += "						function addChartHere(){console.log('ICI001');addChart(chartValues);console.log('ICI002');}";
-		//myInnerHTML += "						var chartValues = [ {'key': 'java', 'value': 1, 'category': 0}, {'key': 'perso', 'value': 2, 'category': 0}, {'key': 'comm', 'value': 3, 'category': 0}, {'key': 'soft', 'value': 4, 'category': 0}, {'key': 'smart', 'value': 5, 'category': 0}, {'key': 'java', 'value': 5, 'category': 1}, {'key': 'perso', 'value': 4, 'category': 1}, {'key': 'comm', 'value': 3, 'category': 1}, {'key': 'soft', 'value': 2, 'category': 1}, {'key': 'smart', 'value': 1, 'category': 1}, {'key': 'java', 'value': 1, 'category': 2}, {'key': 'perso', 'value': 4, 'category': 2}, {'key': 'comm', 'value': 3, 'category': 2}, {'key': 'soft', 'value': 5, 'category': 2}, {'key': 'smart', 'value': 5, 'category': 2},];";
-		myInnerHTML += "					</script>";
-		myInnerHTML += "				</div>";
+		myInnerHTML += "				<div id='chartIsHere' style='height: 200px; border:1px solid black;'></div>";
 		myInnerHTML += "			</td></tr>";
 		myInnerHTML += "			<tr visibility:collapse;><td colspan=2 visibility:collapse;>C<img src='https://s3.amazonaws.com/smart-branding/android-chrome-192x192.png' height=0 width=590></td></tr>";
 		myInnerHTML += "		</table>";
 		
 		candidateInfo.innerHTML = myInnerHTML;
-		
+
+
+		var chartValues = [ {'key': 'java', 'value': 1, 'category': 0}, {'key': 'perso', 'value': 2, 'category': 0}, {'key': 'comm', 'value': 3, 'category': 0}, {'key': 'soft', 'value': 4, 'category': 0}, {'key': 'smart', 'value': 5, 'category': 0}, {'key': 'java', 'value': 5, 'category': 1}, {'key': 'perso', 'value': 4, 'category': 1}, {'key': 'comm', 'value': 3, 'category': 1}, {'key': 'soft', 'value': 2, 'category': 1}, {'key': 'smart', 'value': 1, 'category': 1}, {'key': 'java', 'value': 1, 'category': 2}, {'key': 'perso', 'value': 4, 'category': 2}, {'key': 'comm', 'value': 3, 'category': 2}, {'key': 'soft', 'value': 5, 'category': 2}, {'key': 'smart', 'value': 5, 'category': 2},];
+
+		// Start the Graph Generation
+		console.log('!! ON Y EST !!');
+		google.charts.load('upcoming', {'packages': ['vegachart']}).then(console.log('ICI001');addChart(chartValues);console.log('ICI002'));
+		//google.charts.load('upcoming', {'packages': ['vegachart']}).then(addChartHere);
+		//function addChartHere(){console.log('ICI001');addChart(chartValues);console.log('ICI002');}
+
+
 		//console.log(myInnerHTML);
 	}
 	// If the key word is not found : retry in 1 second.
