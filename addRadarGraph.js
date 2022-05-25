@@ -35,7 +35,7 @@ console.log("STEP0004");
 console.log("STEP0007");
 		console.log('!! ON Y EST !!');
 console.log("STEP0008");
-		google.charts.load('upcoming', {packages: ['vegachart']}).then(addChartHere);
+		google.charts.load('upcoming', {packages: ['vegachart']}).then(addChart);
 console.log("STEP0009");
 
 		//console.log(myInnerHTML);
@@ -53,8 +53,7 @@ console.log("STEP0012");
 
 
 var chartValues = [ {'key': 'java', 'value': 1, 'category': 0}, {'key': 'perso', 'value': 2, 'category': 0}, {'key': 'comm', 'value': 3, 'category': 0}, {'key': 'soft', 'value': 4, 'category': 0}, {'key': 'smart', 'value': 5, 'category': 0}, {'key': 'java', 'value': 5, 'category': 1}, {'key': 'perso', 'value': 4, 'category': 1}, {'key': 'comm', 'value': 3, 'category': 1}, {'key': 'soft', 'value': 2, 'category': 1}, {'key': 'smart', 'value': 1, 'category': 1}, {'key': 'java', 'value': 1, 'category': 2}, {'key': 'perso', 'value': 4, 'category': 2}, {'key': 'comm', 'value': 3, 'category': 2}, {'key': 'soft', 'value': 5, 'category': 2}, {'key': 'smart', 'value': 5, 'category': 2},];
-function addChartHere(){console.log('STEP0008-01');addChart(chartValues);console.log('STEP0008-04');}
-function addChart(chartValues) {
+function addChart() {
 	console.log('STEP0008-02');
 	const dataTable = new google.visualization.DataTable();
 	dataTable.addColumn({type: 'string', 'id': 'key'});
