@@ -1,5 +1,6 @@
 console.log("SCRIPT:addRadarGraph.js");
-setTimeout(function(){addGraphToProfile();},1000, null);
+setTimeout(function(){addGraphToProfile();}, 1000, null);
+console.log("STEP0000");
 
 
 // function : addGraphToProfile
