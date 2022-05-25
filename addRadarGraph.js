@@ -1,17 +1,17 @@
 console.log("SCRIPT:addRadarGraph.js");
-setTimeout(function(){addGraphToProfileInsert();},1000, null);
+setTimeout(function(){addGraphToProfile();},1000, null);
 
 
-// function : addGraphToProfileInsert
+// function : addGraphToProfile
 // args     : 
 // Desc     : Parse the HTML code as Chrome DevTools to add Graph received via API.
 // return   : N/A
-var repeat_AddGraphToProfileInsert = true;
-function addGraphToProfileInsert(event) {
+var repeat_AddGraphToProfile = true;
+function addGraphToProfile(event) {
 	
 	// Add Radar Graph on the SR Profile.
 	if (document.getElementById("st-applicantName") !== null){
-		repeat_AddGraphToProfileInsert = false;
+		repeat_AddGraphToProfile = false;
 		var candidateInfo = document.getElementById("st-applicantName").parentElement.parentElement.parentElement;
 
 		myInnerHTML  = "		<table id='GPAchartIsHereGPA' border=1>";
@@ -37,8 +37,8 @@ function addGraphToProfileInsert(event) {
 	}
 	// If the key word is not found : retry in 1 second.
 	// else : the process is ongoing.
-	if (repeat_AddGraphToProfileInsert){
-		setTimeout(function(){addGraphToProfileInsert();},1000, null);
+	if (repeat_AddGraphToProfile){
+		setTimeout(function(){addGraphToProfile();},1000, null);
 	}
 }
 
