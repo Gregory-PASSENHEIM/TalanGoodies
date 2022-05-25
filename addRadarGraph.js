@@ -15,10 +15,10 @@ function addGraphToProfile(event) {
 		var candidateInfo = document.getElementById("st-applicantName").parentElement.parentElement.parentElement;
 
 		myInnerHTML  = "		<table id='GPAchartIsHereGPA' border=1>";
-		myInnerHTML += "		    <tr><td width=400>";
+		myInnerHTML += "		    <tr><td width=400>A";
 		myInnerHTML += "			    <!--START001-->" + candidateInfo.innerHTML + "<!--STOP001-->";
 		myInnerHTML += "			</td>";
-		myInnerHTML += "		    <td>";
+		myInnerHTML += "		    <td>B";
 		myInnerHTML += "				<div id='chartIsHere' style='height: 200px; border:1px solid black;'>";
 		myInnerHTML += "					<script>";
 		myInnerHTML += "					    console.log('!! ON Y EST !!');";
@@ -28,7 +28,7 @@ function addGraphToProfile(event) {
 		myInnerHTML += "					</script>";
 		myInnerHTML += "				</div>";
 		myInnerHTML += "			</td></tr>";
-		myInnerHTML += "			<tr visibility:collapse;><td colspan=2 visibility:collapse;><img src='https://s3.amazonaws.com/smart-branding/android-chrome-192x192.png' height=0 width=590></td></tr>";
+		myInnerHTML += "			<tr visibility:collapse;><td colspan=2 visibility:collapse;>C<img src='https://s3.amazonaws.com/smart-branding/android-chrome-192x192.png' height=0 width=590></td></tr>";
 		myInnerHTML += "		</table>";
 		
 		candidateInfo.innerHTML = myInnerHTML;
