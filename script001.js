@@ -183,14 +183,22 @@
 		//console.log(options["vega"]["data"]);
 		//console.log(options["vega"]["data"][0]);
 		//console.log(options["vega"]["data"][0]["values"]);
+        console.log("01");
 		options["vega"]["data"][0]["values"] = chartValues;
+        console.log("02");
 		//console.log(options["vega"]["data"][0]["values"]);
 
+        console.log("03");
         const elem = document.createElement("div");
+        console.log("04");
         elem.setAttribute("style", "display: inline-block; width: 250px; height: 300px; padding: 20px;");
+        console.log("05");
 
+        console.log("06");
         const chart = new google.visualization.VegaChart(elem);
+        console.log("07");
         chart.draw(dataTable, options);
+        console.log("08");
 
         console.log(elem);
         console.log(document);
