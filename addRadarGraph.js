@@ -40,11 +40,8 @@ console.log("STEP0006");
 console.log("STEP0007");
 		console.log('!! ON Y EST !!');
 console.log("STEP0008");
-		google.charts.load('upcoming', {'packages': ['vegachart']}).then(console.log('ICI001');addChart(chartValues);console.log('ICI002'););
+		google.charts.load('upcoming', {packages: ['vegachart']}).then(addChartHere);
 console.log("STEP0009");
-		//google.charts.load('upcoming', {'packages': ['vegachart']}).then(addChartHere);
-		//function addChartHere(){console.log('ICI001');addChart(chartValues);console.log('ICI002');}
-
 
 		//console.log(myInnerHTML);
 	}
@@ -60,7 +57,9 @@ console.log("STEP0012");
 }
 
 
+function addChartHere(){console.log('STEP0008-01');addChart(chartValues);console.log('STEP0008-04');}
 function addChart(chartValues) {
+	console.log('STEP0008-02');
 	const dataTable = new google.visualization.DataTable();
 	dataTable.addColumn({type: 'string', 'id': 'key'});
 	dataTable.addColumn({type: 'number', 'id': 'value'});
@@ -258,4 +257,5 @@ function addChart(chartValues) {
 	console.log(document);
 	console.log(document.getElementById("chartIsHere"));
 	document.getElementById("chartIsHere").appendChild(elem);
+	console.log('STEP0008-03');
 }
