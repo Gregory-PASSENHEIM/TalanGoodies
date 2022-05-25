@@ -5,7 +5,8 @@ function addChart(chartValues) {
 	dataTable.addColumn({type: 'string', 'id': 'category'});
 	
 	console.log("!!! YOUPY !!!");
-	
+	console.log("00");
+
 	const options = {
 		'vega': {
 			"$schema": "https://vega.github.io/schema/vega/v5.json",
@@ -14,13 +15,9 @@ function addChart(chartValues) {
 			"height": 200,
 			"padding": 40,
 			"autosize": {"type": "none", "contains": "padding"},
-			"signals": [
-				{"name": "radius", "update": "width / 2"}
-			],
+			"signals": [{"name": "radius", "update": "width / 2"}],
 			"data": [
-				{
-					"name": "table",
-				},
+				{"name": "table",},
 				{
 					"name": "keys",
 					"source": "table",
@@ -32,7 +29,6 @@ function addChart(chartValues) {
 					],
 				},
 			],
-			
 			"scales": [
 				{
 					"name": "angular",
