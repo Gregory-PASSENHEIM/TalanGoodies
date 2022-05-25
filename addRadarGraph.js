@@ -11,8 +11,10 @@ function addGraphToProfile(event) {
 	
 	// Add Radar Graph on the SR Profile.
 	if (document.getElementById("st-applicantName") !== null){
+console.log("STEP0001");
 		repeat_AddGraphToProfile = false;
 		var candidateInfo = document.getElementById("st-applicantName").parentElement.parentElement.parentElement;
+console.log("STEP0002");
 
 		myInnerHTML  = "		<table id='GPAchartIsHereGPA' border=1>";
 		myInnerHTML += "		    <tr><td width=400>A";
@@ -24,14 +26,21 @@ function addGraphToProfile(event) {
 		myInnerHTML += "			<tr visibility:collapse;><td colspan=2 visibility:collapse;>C<img src='https://s3.amazonaws.com/smart-branding/android-chrome-192x192.png' height=0 width=590></td></tr>";
 		myInnerHTML += "		</table>";
 		
+console.log("STEP0003");
 		candidateInfo.innerHTML = myInnerHTML;
+console.log("STEP0004");
 
 
+console.log("STEP0005");
 		var chartValues = [ {'key': 'java', 'value': 1, 'category': 0}, {'key': 'perso', 'value': 2, 'category': 0}, {'key': 'comm', 'value': 3, 'category': 0}, {'key': 'soft', 'value': 4, 'category': 0}, {'key': 'smart', 'value': 5, 'category': 0}, {'key': 'java', 'value': 5, 'category': 1}, {'key': 'perso', 'value': 4, 'category': 1}, {'key': 'comm', 'value': 3, 'category': 1}, {'key': 'soft', 'value': 2, 'category': 1}, {'key': 'smart', 'value': 1, 'category': 1}, {'key': 'java', 'value': 1, 'category': 2}, {'key': 'perso', 'value': 4, 'category': 2}, {'key': 'comm', 'value': 3, 'category': 2}, {'key': 'soft', 'value': 5, 'category': 2}, {'key': 'smart', 'value': 5, 'category': 2},];
+console.log("STEP0006");
 
 		// Start the Graph Generation
+console.log("STEP0007");
 		console.log('!! ON Y EST !!');
+console.log("STEP0008");
 		google.charts.load('upcoming', {'packages': ['vegachart']}).then(console.log('ICI001');addChart(chartValues);console.log('ICI002'));
+console.log("STEP0009");
 		//google.charts.load('upcoming', {'packages': ['vegachart']}).then(addChartHere);
 		//function addChartHere(){console.log('ICI001');addChart(chartValues);console.log('ICI002');}
 
@@ -40,9 +49,13 @@ function addGraphToProfile(event) {
 	}
 	// If the key word is not found : retry in 1 second.
 	// else : the process is ongoing.
+console.log("STEP0010");
 	if (repeat_AddGraphToProfile){
+console.log("STEP0001");
 		setTimeout(function(){addGraphToProfile();},1000, null);
+console.log("STEP0011");
 	}
+console.log("STEP0012");
 }
 
 
