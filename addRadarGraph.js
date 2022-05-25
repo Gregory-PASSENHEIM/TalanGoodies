@@ -17,8 +17,8 @@ function addGraphToProfile(event) {
 		myInnerHTML  = "		<table id='GPAchartIsHereGPA' border=1>";
 		myInnerHTML += "		    <tr><td width=400>";
 		myInnerHTML += "			    <!--START001-->" + candidateInfo.innerHTML + "<!--STOP001-->";
-		myInnerHTML += "			</td><td>";
-		myInnerHTML += "		    <tr><td>";
+		myInnerHTML += "			</td>";
+		myInnerHTML += "		    <td>";
 		myInnerHTML += "				<div id='chartIsHere' style='height: 200px; border:1px solid black;'>";
 		myInnerHTML += "					<script>";
 		myInnerHTML += "					    console.log('!! ON Y EST !!');";
