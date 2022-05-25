@@ -192,5 +192,8 @@
         const chart = new google.visualization.VegaChart(elem);
         chart.draw(dataTable, options);
 
-        document.getElementById("chartIsHere").appendChild(elem);
+        console.log(elem);
+        console.log(document);
+        console.log(document.getElementById("chartIsHere"));
+		document.getElementById("chartIsHere").appendChild(elem);
       }
