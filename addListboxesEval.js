@@ -92,8 +92,9 @@ function buildTableArea_02(innerHTML) {
 function buildSelectBox(value) {
 //console.log("    value : " + value);
 	myInnerHTML = "";
-	myInnerHTML += "<label for='" + value + "'>" + value + ":</label>";
-	myInnerHTML += "<select id='" + value + "'>";
+	myInnerHTML += "<table border=1 style='width: 100%;'><tr>";
+	myInnerHTML += "<td><label for='" + value + "'>" + value + ":</label></td>";
+	myInnerHTML += "<td style='width: 60px;'><select id='" + value + "'>";
 	myInnerHTML += "	<option value='-1'>N/A</option>";
 	myInnerHTML += "	<option value='0'>0</option>";
 	myInnerHTML += "	<option value='1'>1</option>";
@@ -102,6 +103,8 @@ function buildSelectBox(value) {
 	myInnerHTML += "	<option value='4'>4</option>";
 	myInnerHTML += "	<option value='5'>5</option>";
 	myInnerHTML += "	</select>";
+	myInnerHTML += "</td>";
+	myInnerHTML += "</tr></table>";
 //console.log("  myInnerHTML - buildSelectBox - 01 : " + myInnerHTML);
 	return myInnerHTML;
 }
