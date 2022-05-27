@@ -40,7 +40,7 @@ function addListboxesToEval(event) {
 		repeat_AddListboxesToEval = false;
 
 		// Generate the html of the table added in the evaluation part
-		var candidateEval = document.getElementById("st-reviewRating").parentElement;
+		var candidateEval = document.getElementById("st-reviewRating").parentElement.parentElement;
 		candidateEval.innerHTML = buildTableArea_02(candidateEval.innerHTML);
 	}
 	// If the key word is not found : retry in 1 second.
