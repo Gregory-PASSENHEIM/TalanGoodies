@@ -17,7 +17,7 @@ function waitForRightURL_01(event) {
 //console.log("STEP00-00");
 		addGraphToProfile();
 		repeat_WaitForRightURL_01 = false;
-	} else { //console.log("STEP00-01"); }
+	} else { console.log("STEP00-01"); }
 
 	// If the key word is not found : retry in 1 second.
 	// else : the process is ongoing.

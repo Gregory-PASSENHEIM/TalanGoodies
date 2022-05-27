@@ -17,7 +17,7 @@ function waitForRightURL_02(event) {
 //console.log("STEP01-00");
 		addListboxesToEval();
 		repeat_WaitForRightURL_02 = false;
-	} else { //console.log("STEP01-01"); }
+	} else { console.log("STEP01-01"); }
 
 	// If the key word is not found : retry in 1 second.
 	// else : the process is ongoing.
