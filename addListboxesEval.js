@@ -15,7 +15,7 @@ function waitForRightURL_02(event) {
 
 console.log("STEP01-00 : (reviews) - " + window.location.href);
 	if(window.location.href.includes("reviews")){
-console.log("STEP01-01");
+//console.log("STEP01-01");
 		addListboxesToEval();
 		repeat_WaitForRightURL_02 = false;
 	} else { console.log("STEP01-02"); }
@@ -89,7 +89,7 @@ console.log(" firstWidth          : " + firstWidth);
 // Desc     : Create a dynamic HTML sctring
 // return   : HTML string representing the Select Box.
 function buildSelectBox(value) {
-console.log("    value : " + value);
+//console.log("    value : " + value);
 	myInnerHTML = "";
 	myInnerHTML += "<label for='" + value + "'>" + value + ":</label>";
 	myInnerHTML += "<select id='" + value + "'>";

@@ -13,9 +13,9 @@ setTimeout(function(){waitForRightURL_01();}, 500, null);
 var repeat_WaitForRightURL_01 = true;
 function waitForRightURL_01(event) {
 
-console.log("STEP00-00 : (reviews) - " + window.location.href);
+console.log("STEP00-00 : (applications) - " + window.location.href);
 	if(window.location.href.includes("applications")){
-console.log("STEP00-01");
+//console.log("STEP00-01");
 		addGraphToProfile();
 		repeat_WaitForRightURL_01 = false;
 	} else { console.log("STEP00-02"); }
