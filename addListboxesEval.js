@@ -61,7 +61,7 @@ function buildTableArea_02(innerHTML) {
 	myInnerHTML += "	<tr>";
 	myInnerHTML += "		<td rowspan=2>" + innerHTML + "</td>";
 	if (matieres.length%2 == 0) { nbItemsPremiereLine = Math.floor(matieres.length/2); } else { nbItemsPremiereLine = Math.floor(matieres.length/2) + 1; }
-	for (let i = 0; i < nbItemsPremiereLine; i++) {
+	for (let i = 0; i <= nbItemsPremiereLine; i++) {
 console.log("  1) i : " + i);
 		myInnerHTML += "		<td>A-" + buildSelectBox(matieres[i]) + "</td>";
 		i++;
