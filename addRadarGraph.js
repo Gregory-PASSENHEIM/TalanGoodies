@@ -17,14 +17,12 @@ console.log("STEP0001");
 		var candidateInfo = document.getElementById("st-applicantName").parentElement.parentElement.parentElement;
 console.log("STEP0002");
 
-		myInnerHTML  = "		<table id='GPAchartIsHereGPA' border=1>";
-		myInnerHTML += "		    <tr><td width=400>A";
-		myInnerHTML += "			    <!--START001-->" + candidateInfo.innerHTML + "<!--STOP001-->";
-		myInnerHTML += "			</td>";
-		myInnerHTML += "		    <td>B";
-		myInnerHTML += "				<div id='chartIsHere' style='height: 200px; border:1px solid black;'></div>";
-		myInnerHTML += "			</td></tr>";
-		myInnerHTML += "			<tr visibility:collapse;><td colspan=2 visibility:collapse;>C<img src='https://s3.amazonaws.com/smart-branding/android-chrome-192x192.png' height=0 width=590></td></tr>";
+		myInnerHTML  = "		<table id='GPAchartIsHereGPA' border=0>";
+		myInnerHTML += "		    <tr>";
+		myInnerHTML += "		        <td width=400>" + candidateInfo.innerHTML + "</td>";
+		myInnerHTML += "		    	<td><div id='chartIsHere' style='height: 200px; border:1px solid black;'></div></td>";
+		myInnerHTML += "			</tr>";
+		myInnerHTML += "			<tr visibility:collapse;><td colspan=2 visibility:collapse;><img src='https://s3.amazonaws.com/smart-branding/android-chrome-192x192.png' height=0 width=590></td></tr>";
 		myInnerHTML += "		</table>";
 		
 console.log("STEP0003");
