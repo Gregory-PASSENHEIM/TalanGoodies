@@ -13,11 +13,12 @@ setTimeout(function(){waitForRightURL_02();}, 500, null);
 var repeat_WaitForRightURL_02 = true;
 function waitForRightURL_02(event) {
 
+console.log("STEP01-00 : (reviews) - " + window.location.href);
 	if(window.location.href.includes("reviews")){
-//console.log("STEP01-00");
+console.log("STEP01-01");
 		addListboxesToEval();
 		repeat_WaitForRightURL_02 = false;
-	} else { console.log("STEP01-01"); }
+	} else { console.log("STEP01-02"); }
 
 	// If the key word is not found : retry in 1 second.
 	// else : the process is ongoing.
