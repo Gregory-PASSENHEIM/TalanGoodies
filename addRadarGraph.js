@@ -1,5 +1,5 @@
 console.log("SCRIPT:addRadarGraph.js");
-setTimeout(function(){addGraphToProfile();}, 1000, null);
+setTimeout(function(){addGraphToProfile();}, 100, null);
 console.log("STEP0000");
 
 
@@ -12,41 +12,40 @@ function addGraphToProfile(event) {
 	
 	// Add Radar Graph on the SR Profile.
 	if (document.getElementById("st-applicantName") !== null){
-console.log("STEP0001");
 		repeat_AddGraphToProfile = false;
-		var candidateInfo = document.getElementById("st-applicantName").parentElement.parentElement.parentElement;
-console.log("STEP0002");
 
-		myInnerHTML  = "		<table id='GPAchartIsHereGPA' border=0>";
-		myInnerHTML += "		    <tr>";
-		myInnerHTML += "		        <td width=300>" + candidateInfo.innerHTML + "</td>";
-		myInnerHTML += "		    	<td><div id='chartIsHere' style='height: 200px; border:1px solid black;'></div></td>";
-		myInnerHTML += "			</tr>";
-		myInnerHTML += "			<tr visibility:collapse;><td colspan=2 visibility:collapse;><img src='https://s3.amazonaws.com/smart-branding/android-chrome-192x192.png' height=0 width=590></td></tr>";
-		myInnerHTML += "		</table>";
-		
-console.log("STEP0003");
-		candidateInfo.innerHTML = myInnerHTML;
-console.log("STEP0004");
+		// Generate the html of the table added in the profile
+		var candidateInfo = document.getElementById("st-applicantName").parentElement.parentElement.parentElement;
+		candidateInfo.innerHTML = buildTableArea(candidateInfo.innerHTML);
 
 		// Start the Graph Generation
-console.log("STEP0007");
-		console.log('!! ON Y EST !!');
-console.log("STEP0008");
 		google.charts.load('upcoming', {packages: ['vegachart']}).then(addChart);
-console.log("STEP0009");
 
-		//console.log(myInnerHTML);
 	}
 	// If the key word is not found : retry in 1 second.
 	// else : the process is ongoing.
-console.log("STEP0010");
 	if (repeat_AddGraphToProfile){
-console.log("STEP0001");
 		setTimeout(function(){addGraphToProfile();},1000, null);
-console.log("STEP0011");
 	}
-console.log("STEP0012");
+}
+
+
+// function : buildTableArea
+// args     : innerHTML = The HTML that were present before the execution.
+//            innerHTML = The Name and Label that has to be used for.
+// Desc     : Create a dynamic HTML sctring
+// return   : HTML string representing the Select Box.
+function buildTableArea(innerHTML) {
+	myInnerHTML  = "";
+	myInnerHTML += "		<table id='GPAchartIsHereGPA' border=0>";
+	myInnerHTML += "		    <tr>";
+	myInnerHTML += "		        <td width=300>" + innerHTML + "</td>";
+	myInnerHTML += "		    	<td><div id='chartIsHere' style='height:300px;'></div></td>";
+	myInnerHTML += "			</tr>";
+	myInnerHTML += "			<tr visibility:collapse;><td colspan=2 visibility:collapse;><img src='https://s3.amazonaws.com/smart-branding/android-chrome-192x192.png' height=0 width=590></td></tr>";
+	myInnerHTML += "		</table>";
+console.log("  myInnerHTML : " + myInnerHTML);
+	return myInnerHTML;
 }
 
 
