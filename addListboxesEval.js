@@ -1,5 +1,5 @@
 // Globals variables déclaration
-const matieres = ["Java", "Communication", "Vulgarisation", "Test01", "Test02"];
+const matieres = ["Java", "Communication", "Vulgarisation", "Test01", "Test02", "Test0A", "Test0B"];
 
 
 // Init
@@ -63,14 +63,13 @@ function buildTableArea_02(innerHTML) {
 	if (matieres.length%2 == 0) { nbItemsPremiereLine = Math.floor(matieres.length/2); } else { nbItemsPremiereLine = Math.floor(matieres.length/2) + 1; }
 	for (let i = 0; i <= nbItemsPremiereLine; i++) {
 console.log("  1) i : " + i);
-		myInnerHTML += "		<td>A-" + buildSelectBox(matieres[i]) + "</td>";
-		i++;
+		myInnerHTML += "		<td>" + buildSelectBox(matieres[i]) + "</td>";
 	}
 	myInnerHTML += "	</tr>";
 	myInnerHTML += "	<tr>";
 	for (let i = nbItemsPremiereLine; i < matieres.length; i++) {
 console.log("  2) i : " + i);
- 		myInnerHTML += "		<td>B-" + buildSelectBox(matieres[i]) + "</td>";
+ 		myInnerHTML += "		<td>" + buildSelectBox(matieres[i]) + "</td>";
 	}
 	myInnerHTML += "	</tr>";
 	myInnerHTML += "</table>";
