@@ -269,9 +269,9 @@ function addChart() {
 	chart.draw(dataTable, options);
 	//console.log("08");
 	
-	console.log(elem);
-	console.log(document);
-	console.log(document.getElementById("chartIsHere"));
+	//console.log(elem);
+	//console.log(document);
+	//console.log(document.getElementById("chartIsHere"));
 	document.getElementById("chartIsHere").appendChild(elem);
-	console.log('STEP00-08-03');
+	//console.log('STEP00-08-03');
 }
