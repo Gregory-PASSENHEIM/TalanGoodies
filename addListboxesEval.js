@@ -1,12 +1,30 @@
-console.log("SCRIPT:addListboxesEval.js");
-if(window.location.href.includes("reviews")){
-	setTimeout(function(){addListboxesToEval();}, 100, null);
-	console.log("STEP0000");
-} else { console.log("STEP0001"); }
-
-
-// Globals variables :
+// Globals variables déclaration
 const matieres = ["Java", "Communication", "Vulgarisation", "Test01", "Test02"];
+
+
+// Init
+console.log("SCRIPT:addListboxesEval.js");
+setTimeout(function(){waitForRightURL();}, 500, null);
+
+// function : waitForRightURL
+// args     : 
+// Desc     : Wait for the right URL is present.
+// return   : N/A
+var repeat_WaitForRightURL = true;
+function waitForRightURL(event) {
+
+	if(window.location.href.includes("reviews")){
+console.log("STEP01-00");
+		addListboxesToEval();
+		repeat_WaitForRightURL = false;
+	} else { console.log("STEP01-01"); }
+
+	// If the key word is not found : retry in 1 second.
+	// else : the process is ongoing.
+	if (repeat_WaitForRightURL){
+		setTimeout(function(){waitForRightURL();},1000, null);
+	}
+}
 
 
 // function : addListboxesToEval

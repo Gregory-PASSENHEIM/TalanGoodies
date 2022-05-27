@@ -1,6 +1,30 @@
+// Globals variables déclaration
+const chartValues = [ {'key': 'java', 'value': 1, 'category': 0}, {'key': 'perso', 'value': 2, 'category': 0}, {'key': 'comm', 'value': 3, 'category': 0}, {'key': 'soft', 'value': 4, 'category': 0}, {'key': 'smart', 'value': 5, 'category': 0}, {'key': 'java', 'value': 5, 'category': 1}, {'key': 'perso', 'value': 4, 'category': 1}, {'key': 'comm', 'value': 3, 'category': 1}, {'key': 'soft', 'value': 2, 'category': 1}, {'key': 'smart', 'value': 1, 'category': 1}, {'key': 'java', 'value': 1, 'category': 2}, {'key': 'perso', 'value': 4, 'category': 2}, {'key': 'comm', 'value': 3, 'category': 2}, {'key': 'soft', 'value': 5, 'category': 2}, {'key': 'smart', 'value': 5, 'category': 2},];
+
+
+// Init
 console.log("SCRIPT:addRadarGraph.js");
-setTimeout(function(){addGraphToProfile();}, 100, null);
-console.log("STEP0000");
+setTimeout(function(){waitForRightURL();}, 500, null);
+
+// function : waitForRightURL
+// args     : 
+// Desc     : Wait for the right URL is present.
+// return   : N/A
+var repeat_WaitForRightURL = true;
+function waitForRightURL(event) {
+
+	if(window.location.href.includes("reviews")){
+console.log("STEP00-00");
+		addGraphToProfile();
+		repeat_WaitForRightURL = false;
+	} else { console.log("STEP00-01"); }
+
+	// If the key word is not found : retry in 1 second.
+	// else : the process is ongoing.
+	if (repeat_WaitForRightURL){
+		setTimeout(function(){waitForRightURL();},1000, null);
+	}
+}
 
 
 // function : addGraphToProfile
@@ -49,9 +73,8 @@ console.log("  myInnerHTML : " + myInnerHTML);
 }
 
 
-var chartValues = [ {'key': 'java', 'value': 1, 'category': 0}, {'key': 'perso', 'value': 2, 'category': 0}, {'key': 'comm', 'value': 3, 'category': 0}, {'key': 'soft', 'value': 4, 'category': 0}, {'key': 'smart', 'value': 5, 'category': 0}, {'key': 'java', 'value': 5, 'category': 1}, {'key': 'perso', 'value': 4, 'category': 1}, {'key': 'comm', 'value': 3, 'category': 1}, {'key': 'soft', 'value': 2, 'category': 1}, {'key': 'smart', 'value': 1, 'category': 1}, {'key': 'java', 'value': 1, 'category': 2}, {'key': 'perso', 'value': 4, 'category': 2}, {'key': 'comm', 'value': 3, 'category': 2}, {'key': 'soft', 'value': 5, 'category': 2}, {'key': 'smart', 'value': 5, 'category': 2},];
 function addChart() {
-	console.log('STEP0008-02');
+	console.log('STEP00-08-02');
 	const dataTable = new google.visualization.DataTable();
 	dataTable.addColumn({type: 'string', 'id': 'key'});
 	dataTable.addColumn({type: 'number', 'id': 'value'});
@@ -249,5 +272,5 @@ function addChart() {
 	console.log(document);
 	console.log(document.getElementById("chartIsHere"));
 	document.getElementById("chartIsHere").appendChild(elem);
-	console.log('STEP0008-03');
+	console.log('STEP00-08-03');
 }
