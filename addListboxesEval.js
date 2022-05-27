@@ -40,7 +40,7 @@ function addListboxesToEval(event) {
 		repeat_AddListboxesToEval = false;
 
 		// Generate the html of the table added in the evaluation part
-		var candidateEval = document.getElementById("st-reviewRating").parentElement.parentElement;
+		var candidateEval = document.getElementById("st-reviewRating").parentElement.parentElement.parentElement.parentElement;
 		candidateEval.innerHTML = buildTableArea_02(candidateEval.innerHTML);
 	}
 	// If the key word is not found : retry in 1 second.
@@ -59,28 +59,22 @@ function addListboxesToEval(event) {
 function buildTableArea_02(innerHTML) {
 	nbItemsPremiereLine = Math.floor(matieres.length/2)+matieres.length%2;
 //console.log(" nbItemsPremiereLine : " + nbItemsPremiereLine);
-	customWidth = Math.trunc(100 / (nbItemsPremiereLine));
-//console.log(" otherWidth          : " + otherWidth);
 	
 	myInnerHTML = "";
-	myInnerHTML += "<table style='width:100%'>";
-	myInnerHTML += "	<tr><td style='width:105px'>" + innerHTML + "</td>";
-	myInnerHTML += "	<td>";
-	myInnerHTML += "		<table style='width:100%'>";
-	myInnerHTML += "			<tr>";
+	myInnerHTML += "		<table style='width:100%' border=1>";
+	myInnerHTML += "          <tr>";
+	myInnerHTML += "            <td rowspan=2 style='width:105px'>" + innerHTML + "</td>";
 	for (let i = 0; i < nbItemsPremiereLine; i++) {
-		myInnerHTML += "				<td style='width: " + customWidth + "%;'>" + buildSelectBox(matieres[i]) + "</td>";
+		myInnerHTML += buildSelectBox(matieres[i]);
 	}
-	myInnerHTML += "			</tr>";
-	myInnerHTML += "			<tr>";
+	myInnerHTML += "          </tr>";
+	myInnerHTML += "          <tr>";
 	for (let i = nbItemsPremiereLine; i < matieres.length; i++) {
- 		myInnerHTML += "				<td style='width: " + customWidth + "%;'>" + buildSelectBox(matieres[i]) + "</td>";
+ 		myInnerHTML += buildSelectBox(matieres[i]);
 	}
-	myInnerHTML += "			</tr>";
+	myInnerHTML += "          </tr>";
 	myInnerHTML += "		</table>";
-	myInnerHTML += "	</td>";
-	myInnerHTML += "	</tr>";
-	myInnerHTML += "</table>";
+
 	return myInnerHTML;
 }
 
@@ -92,19 +86,18 @@ function buildTableArea_02(innerHTML) {
 function buildSelectBox(value) {
 //console.log("    value : " + value);
 	myInnerHTML = "";
-	myInnerHTML += "<table border=1 style='width: 100%;'><tr>";
 	myInnerHTML += "<td><label for='" + value + "'>" + value + ":</label></td>";
-	myInnerHTML += "<td style='width: 60px;'><select id='" + value + "'>";
-	myInnerHTML += "	<option value='-1'>N/A</option>";
-	myInnerHTML += "	<option value='0'>0</option>";
-	myInnerHTML += "	<option value='1'>1</option>";
-	myInnerHTML += "	<option value='2'>2</option>";
-	myInnerHTML += "	<option value='3'>3</option>";
-	myInnerHTML += "	<option value='4'>4</option>";
-	myInnerHTML += "	<option value='5'>5</option>";
+	myInnerHTML += "<td style='width:15px'>";
+	myInnerHTML += "	<select id='" + value + "'>";
+	myInnerHTML += "		<option value='-1'>N/A</option>";
+	myInnerHTML += "		<option value='0'>0</option>";
+	myInnerHTML += "		<option value='1'>1</option>";
+	myInnerHTML += "		<option value='2'>2</option>";
+	myInnerHTML += "		<option value='3'>3</option>";
+	myInnerHTML += "		<option value='4'>4</option>";
+	myInnerHTML += "		<option value='5'>5</option>";
 	myInnerHTML += "	</select>";
 	myInnerHTML += "</td>";
-	myInnerHTML += "</tr></table>";
 //console.log("  myInnerHTML - buildSelectBox - 01 : " + myInnerHTML);
 	return myInnerHTML;
 }
