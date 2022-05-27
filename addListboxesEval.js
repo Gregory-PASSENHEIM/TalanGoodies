@@ -4,25 +4,25 @@ const matieres = ["Java", "Communication", "Vulgarisation", "Test01", "Test02"];
 
 // Init
 console.log("SCRIPT:addListboxesEval.js");
-setTimeout(function(){waitForRightURL();}, 500, null);
+setTimeout(function(){waitForRightURL_02();}, 500, null);
 
-// function : waitForRightURL
+// function : waitForRightURL_02
 // args     : 
 // Desc     : Wait for the right URL is present.
 // return   : N/A
-var repeat_WaitForRightURL = true;
-function waitForRightURL(event) {
+var repeat_WaitForRightURL_02 = true;
+function waitForRightURL_02(event) {
 
 	if(window.location.href.includes("reviews")){
 console.log("STEP01-00");
 		addListboxesToEval();
-		repeat_WaitForRightURL = false;
+		repeat_WaitForRightURL_02 = false;
 	} else { console.log("STEP01-01"); }
 
 	// If the key word is not found : retry in 1 second.
 	// else : the process is ongoing.
-	if (repeat_WaitForRightURL){
-		setTimeout(function(){waitForRightURL();},1000, null);
+	if (repeat_WaitForRightURL_02){
+		setTimeout(function(){waitForRightURL_02();},1000, null);
 	}
 }
 
@@ -40,7 +40,7 @@ function addListboxesToEval(event) {
 
 		// Generate the html of the table added in the evaluation part
 		var candidateEval = document.getElementById("st-reviewRating").parentElement;
-		candidateEval.innerHTML = buildTableArea(candidateEval.innerHTML);
+		candidateEval.innerHTML = buildTableArea_02(candidateEval.innerHTML);
 	}
 	// If the key word is not found : retry in 1 second.
 	// else : the process is ongoing.
@@ -50,12 +50,12 @@ function addListboxesToEval(event) {
 }
 
 
-// function : buildTableArea
+// function : buildTableArea_02
 // args     : innerHTML = The HTML that were present before the execution.
 //            innerHTML = The Name and Label that has to be used for.
 // Desc     : Create a dynamic HTML sctring
 // return   : HTML string representing the Select Box.
-function buildTableArea(innerHTML) {
+function buildTableArea_02(innerHTML) {
 	myInnerHTML = "";
 	myInnerHTML += "<table style='width:100%' border=1>";
 	myInnerHTML += "	<tr>";
@@ -72,7 +72,7 @@ function buildTableArea(innerHTML) {
 	}
 	myInnerHTML += "	</tr>";
 	myInnerHTML += "</table>";
-console.log("  myInnerHTML : " + myInnerHTML);
+console.log("  myInnerHTML - buildTableArea_02 - 01 : " + myInnerHTML);
 	return myInnerHTML;
 }
 
@@ -92,6 +92,7 @@ console.log("    value : " + value);
 	myInnerHTML += "	<option value='4'>4</option>";
 	myInnerHTML += "	<option value='5'>5</option>";
 	myInnerHTML += "	</select>";
+console.log("  myInnerHTML - buildSelectBox - 01 : " + myInnerHTML);
 	return myInnerHTML;
 }
 

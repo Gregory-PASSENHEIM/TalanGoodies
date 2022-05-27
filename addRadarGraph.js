@@ -4,25 +4,25 @@ const chartValues = [ {'key': 'java', 'value': 1, 'category': 0}, {'key': 'perso
 
 // Init
 console.log("SCRIPT:addRadarGraph.js");
-setTimeout(function(){waitForRightURL();}, 500, null);
+setTimeout(function(){waitForRightURL_01();}, 500, null);
 
-// function : waitForRightURL
+// function : waitForRightURL_01
 // args     : 
 // Desc     : Wait for the right URL is present.
 // return   : N/A
-var repeat_WaitForRightURL = true;
-function waitForRightURL(event) {
+var repeat_WaitForRightURL_01 = true;
+function waitForRightURL_01(event) {
 
 	if(window.location.href.includes("reviews")){
 console.log("STEP00-00");
 		addGraphToProfile();
-		repeat_WaitForRightURL = false;
+		repeat_WaitForRightURL_01 = false;
 	} else { console.log("STEP00-01"); }
 
 	// If the key word is not found : retry in 1 second.
 	// else : the process is ongoing.
-	if (repeat_WaitForRightURL){
-		setTimeout(function(){waitForRightURL();},1000, null);
+	if (repeat_WaitForRightURL_01){
+		setTimeout(function(){waitForRightURL_01();},1000, null);
 	}
 }
 
@@ -40,7 +40,7 @@ function addGraphToProfile(event) {
 
 		// Generate the html of the table added in the profile
 		var candidateInfo = document.getElementById("st-applicantName").parentElement.parentElement.parentElement;
-		candidateInfo.innerHTML = buildTableArea(candidateInfo.innerHTML);
+		candidateInfo.innerHTML = buildTableArea_01(candidateInfo.innerHTML);
 
 		// Start the Graph Generation
 		google.charts.load('upcoming', {packages: ['vegachart']}).then(addChart);
@@ -54,12 +54,12 @@ function addGraphToProfile(event) {
 }
 
 
-// function : buildTableArea
+// function : buildTableArea_01
 // args     : innerHTML = The HTML that were present before the execution.
 //            innerHTML = The Name and Label that has to be used for.
 // Desc     : Create a dynamic HTML sctring
 // return   : HTML string representing the Select Box.
-function buildTableArea(innerHTML) {
+function buildTableArea_01(innerHTML) {
 	myInnerHTML  = "";
 	myInnerHTML += "		<table id='GPAchartIsHereGPA' border=0>";
 	myInnerHTML += "		    <tr>";
@@ -68,7 +68,7 @@ function buildTableArea(innerHTML) {
 	myInnerHTML += "			</tr>";
 	myInnerHTML += "			<tr visibility:collapse;><td colspan=2 visibility:collapse;><img src='https://s3.amazonaws.com/smart-branding/android-chrome-192x192.png' height=0 width=590></td></tr>";
 	myInnerHTML += "		</table>";
-console.log("  myInnerHTML : " + myInnerHTML);
+console.log("  myInnerHTML - buildTableArea_01 - 00 : " + myInnerHTML);
 	return myInnerHTML;
 }
 
