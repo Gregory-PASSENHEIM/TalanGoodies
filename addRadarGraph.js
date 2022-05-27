@@ -3,7 +3,7 @@ const chartValues = [ {'key': 'java', 'value': 1, 'category': 0}, {'key': 'perso
 
 
 // Init
-console.log("SCRIPT:addRadarGraph.js");
+//console.log("SCRIPT:addRadarGraph.js");
 setTimeout(function(){waitForRightURL_01();}, 500, null);
 
 // function : waitForRightURL_01
@@ -14,10 +14,10 @@ var repeat_WaitForRightURL_01 = true;
 function waitForRightURL_01(event) {
 
 	if(window.location.href.includes("reviews")){
-console.log("STEP00-00");
+//console.log("STEP00-00");
 		addGraphToProfile();
 		repeat_WaitForRightURL_01 = false;
-	} else { console.log("STEP00-01"); }
+	} else { //console.log("STEP00-01"); }
 
 	// If the key word is not found : retry in 1 second.
 	// else : the process is ongoing.
@@ -68,7 +68,7 @@ function buildTableArea_01(innerHTML) {
 	myInnerHTML += "			</tr>";
 	myInnerHTML += "			<tr visibility:collapse;><td colspan=2 visibility:collapse;><img src='https://s3.amazonaws.com/smart-branding/android-chrome-192x192.png' height=0 width=590></td></tr>";
 	myInnerHTML += "		</table>";
-console.log("  myInnerHTML - buildTableArea_01 - 00 : " + myInnerHTML);
+//console.log("  myInnerHTML - buildTableArea_01 - 00 : " + myInnerHTML);
 	return myInnerHTML;
 }
 
@@ -80,8 +80,8 @@ function addChart() {
 	dataTable.addColumn({type: 'number', 'id': 'value'});
 	dataTable.addColumn({type: 'string', 'id': 'category'});
 	
-	console.log("!!! YOUPY !!!");
-	console.log("00");
+	//console.log("!!! YOUPY !!!");
+	//console.log("00");
 	
 	const options = {
 		'vega': {
@@ -251,22 +251,22 @@ function addChart() {
 	//console.log(options["vega"]["data"]);
 	//console.log(options["vega"]["data"][0]);
 	//console.log(options["vega"]["data"][0]["values"]);
-	console.log("01");
+	//console.log("01");
 	options["vega"]["data"][0]["values"] = chartValues;
-	console.log("02");
+	//console.log("02");
 	//console.log(options["vega"]["data"][0]["values"]);
 	
-	console.log("03");
+	//console.log("03");
 	const elem = document.createElement("div");
-	console.log("04");
+	//console.log("04");
 	elem.setAttribute("style", "display: inline-block; width: 250px; height: 300px; padding: 20px;");
-	console.log("05");
+	//console.log("05");
 	
-	console.log("06");
+	//console.log("06");
 	const chart = new google.visualization.VegaChart(elem);
-	console.log("07");
+	//console.log("07");
 	chart.draw(dataTable, options);
-	console.log("08");
+	//console.log("08");
 	
 	console.log(elem);
 	console.log(document);

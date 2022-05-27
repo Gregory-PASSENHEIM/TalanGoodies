@@ -3,7 +3,7 @@ const matieres = ["Java", "Communication", "Vulgarisation", "Test01", "Test02"];
 
 
 // Init
-console.log("SCRIPT:addListboxesEval.js");
+//console.log("SCRIPT:addListboxesEval.js");
 setTimeout(function(){waitForRightURL_02();}, 500, null);
 
 // function : waitForRightURL_02
@@ -14,10 +14,10 @@ var repeat_WaitForRightURL_02 = true;
 function waitForRightURL_02(event) {
 
 	if(window.location.href.includes("reviews")){
-console.log("STEP01-00");
+//console.log("STEP01-00");
 		addListboxesToEval();
 		repeat_WaitForRightURL_02 = false;
-	} else { console.log("STEP01-01"); }
+	} else { //console.log("STEP01-01"); }
 
 	// If the key word is not found : retry in 1 second.
 	// else : the process is ongoing.
@@ -62,17 +62,19 @@ function buildTableArea_02(innerHTML) {
 	myInnerHTML += "		<td rowspan=2>" + innerHTML + "</td>";
 	if (matieres.length%2 == 0) { nbItemsPremiereLine = Math.floor(matieres.length/2); } else { nbItemsPremiereLine = Math.floor(matieres.length/2) + 1; }
 	for (let i = 0; i < nbItemsPremiereLine; i++) {
+console.log("  1) i : " + i);
 		myInnerHTML += "		<td>A-" + buildSelectBox(matieres[i]) + "</td>";
 		i++;
 	}
 	myInnerHTML += "	</tr>";
 	myInnerHTML += "	<tr>";
 	for (let i = nbItemsPremiereLine; i < matieres.length; i++) {
+console.log("  2) i : " + i);
  		myInnerHTML += "		<td>B-" + buildSelectBox(matieres[i]) + "</td>";
 	}
 	myInnerHTML += "	</tr>";
 	myInnerHTML += "</table>";
-console.log("  myInnerHTML - buildTableArea_02 - 01 : " + myInnerHTML);
+//console.log("  myInnerHTML - buildTableArea_02 - 01 : " + myInnerHTML);
 	return myInnerHTML;
 }
 
@@ -83,7 +85,7 @@ console.log("  myInnerHTML - buildTableArea_02 - 01 : " + myInnerHTML);
 function buildSelectBox(value) {
 console.log("    value : " + value);
 	myInnerHTML = "";
-	myInnerHTML += "<label for='" + value + "'>Java:</label>";
+	myInnerHTML += "<label for='" + value + "'>" + value + ":</label>";
 	myInnerHTML += "<select id='" + value + "'>";
 	myInnerHTML += "	<option value='0'>0</option>";
 	myInnerHTML += "	<option value='1'>1</option>";
@@ -92,7 +94,7 @@ console.log("    value : " + value);
 	myInnerHTML += "	<option value='4'>4</option>";
 	myInnerHTML += "	<option value='5'>5</option>";
 	myInnerHTML += "	</select>";
-console.log("  myInnerHTML - buildSelectBox - 01 : " + myInnerHTML);
+//console.log("  myInnerHTML - buildSelectBox - 01 : " + myInnerHTML);
 	return myInnerHTML;
 }
 
