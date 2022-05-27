@@ -19,7 +19,7 @@ console.log("STEP0002");
 
 		myInnerHTML  = "		<table id='GPAchartIsHereGPA' border=0>";
 		myInnerHTML += "		    <tr>";
-		myInnerHTML += "		        <td width=400>" + candidateInfo.innerHTML + "</td>";
+		myInnerHTML += "		        <td width=300>" + candidateInfo.innerHTML + "</td>";
 		myInnerHTML += "		    	<td><div id='chartIsHere' style='height: 200px; border:1px solid black;'></div></td>";
 		myInnerHTML += "			</tr>";
 		myInnerHTML += "			<tr visibility:collapse;><td colspan=2 visibility:collapse;><img src='https://s3.amazonaws.com/smart-branding/android-chrome-192x192.png' height=0 width=590></td></tr>";
