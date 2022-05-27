@@ -58,25 +58,25 @@ function addListboxesToEval(event) {
 // return   : HTML string representing the Select Box.
 function buildTableArea_02(innerHTML) {
 	nbItemsPremiereLine = Math.floor(matieres.length/2)+matieres.length%2;
-console.log(" nbItemsPremiereLine : " + nbItemsPremiereLine);
+//console.log(" nbItemsPremiereLine : " + nbItemsPremiereLine);
 	otherWidth = Math.trunc(100 / (nbItemsPremiereLine + 1));
-console.log(" otherWidth          : " + otherWidth);
+//console.log(" otherWidth          : " + otherWidth);
 	firstWidth = 100 - nbItemsPremiereLine * otherWidth;
-console.log(" firstWidth          : " + firstWidth);
+//console.log(" firstWidth          : " + firstWidth);
 	
 	myInnerHTML = "";
 	myInnerHTML += "<table style='table-layout: fixed; width: 100%;' border=1>";
 	myInnerHTML += "	<tr>";
-	myInnerHTML += "		<td rowspan=2>" + innerHTML + "</td>";
+	myInnerHTML += "		<td rowspan=2 style='width: " + firstWidth + "%;'>" + innerHTML + "</td>";
 	for (let i = 0; i < nbItemsPremiereLine; i++) {
 //console.log("  1) i : " + i);
-		myInnerHTML += "		<td style='width: 25%;'>" + buildSelectBox(matieres[i]) + "</td>";
+		myInnerHTML += "		<td style='width: " + otherWidth + "%;'>" + buildSelectBox(matieres[i]) + "</td>";
 	}
 	myInnerHTML += "	</tr>";
 	myInnerHTML += "	<tr>";
 	for (let i = nbItemsPremiereLine; i < matieres.length; i++) {
 //console.log("  2) i : " + i);
- 		myInnerHTML += "		<td style='width: 25%;'>" + buildSelectBox(matieres[i]) + "</td>";
+ 		myInnerHTML += "		<td style='width: " + otherWidth + "%;'>" + buildSelectBox(matieres[i]) + "</td>";
 	}
 	myInnerHTML += "	</tr>";
 	myInnerHTML += "</table>";
