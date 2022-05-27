@@ -75,7 +75,7 @@ function buildTableArea_01(innerHTML) {
 
 
 function addChart() {
-	console.log('STEP00-08-02');
+	//console.log('STEP00-08-02');
 	const dataTable = new google.visualization.DataTable();
 	dataTable.addColumn({type: 'string', 'id': 'key'});
 	dataTable.addColumn({type: 'number', 'id': 'value'});
