@@ -1,6 +1,9 @@
 console.log("SCRIPT:addListboxesEval.js");
-setTimeout(function(){addListboxesToEval();}, 100, null);
-console.log("STEP0000");
+if(window.location.href.includes("reviews")){
+	setTimeout(function(){addListboxesToEval();}, 100, null);
+	console.log("STEP0000");
+} else { console.log("STEP0001"); }
+
 
 // Globals variables :
 const matieres = ["Java", "Communication", "Vulgarisation", "Test01", "Test02"];
