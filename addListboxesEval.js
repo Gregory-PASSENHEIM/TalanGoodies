@@ -63,10 +63,10 @@ function buildTableArea_02(innerHTML) {
 //console.log(" otherWidth          : " + otherWidth);
 	
 	myInnerHTML = "";
-	myInnerHTML += "<table style='width:100%' border=1>";
-	myInnerHTML += "	<tr><td style='width:200px'>" + innerHTML + "</td>";
+	myInnerHTML += "<table style='width:100%'>";
+	myInnerHTML += "	<tr><td style='width:105px'>" + innerHTML + "</td>";
 	myInnerHTML += "	<td>";
-	myInnerHTML += "		<table style='width:100%' border=1>";
+	myInnerHTML += "		<table style='width:100%'>";
 	myInnerHTML += "			<tr>";
 	for (let i = 0; i < nbItemsPremiereLine; i++) {
 		myInnerHTML += "				<td style='width: " + customWidth + "%;'>" + buildSelectBox(matieres[i]) + "</td>";
