@@ -1,7 +1,7 @@
 console.log("1) Chargement du script contenant la fonction.");
 
 
-// Once the DOM is loaded...
+// Once the DOM is loaded buildPopUpForm is called.
 window.onload = function() {
 	buildPopUpForm();
 };
