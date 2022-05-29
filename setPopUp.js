@@ -1,8 +1,7 @@
 console.log("1) Chargement du script contenant la fonction.");
-buildPopUpForm(currentWindow, currentDocument);
 
 // Build the PopUp form.
-function buildPopUpForm(currentWindow, currentDocument) {
+function buildPopUpForm() {
 	if window.location.href.includes("talan0.sharepoint.com") && 
 		window.location.href.includes("CanadaAll") && 
 		window.location.href.includes("Talan-America.aspx"){
