@@ -80,3 +80,4 @@ function resetInfo() {
 	document.getElementById("apiUrl").value = "";
 }
 
+// This is a test
