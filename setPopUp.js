@@ -1,3 +1,5 @@
+alert("1"); 
+
 // Build the PopUp form.
 function buildPopUpForm(currentWindow, currentDocument) {
 	if window.location.href.includes("talan0.sharepoint.com") && 
