@@ -1,8 +1,17 @@
 console.log("1) Chargement du script contenant la fonction.");
 
 
-// Once the DOM is loaded buildPopUpForm is called.
+// Generales variables
+currentTabs = null;
+
+
+// Once the DOM is loaded...
 window.onload = function() {
+	chrome.tabs.query({active: true, lastFocusedWindow: true}, tabs => {
+		console.log("2)" + tabs[0].url)
+		currentTabs = tabs;
+	});
+	console.log("3)" + currentTabs[0].url)
 	buildPopUpForm();
 };
 
