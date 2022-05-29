@@ -1,6 +1,7 @@
 console.log("1) Chargement du script contenant la fonction.");
 buildPopUpForm();
 
+
 // Build the PopUp form.
 function buildPopUpForm() {
 	if window.location.href.includes("talan0.sharepoint.com") && 
