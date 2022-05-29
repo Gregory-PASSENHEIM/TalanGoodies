@@ -1,4 +1,5 @@
 console.log("1) Chargement du script contenant la fonction.");
+buildPopUpForm(currentWindow, currentDocument);
 
 // Build the PopUp form.
 function buildPopUpForm(currentWindow, currentDocument) {
