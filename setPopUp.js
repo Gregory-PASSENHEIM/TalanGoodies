@@ -10,7 +10,7 @@ function buildPopUpForm(currentWindow, currentDocument) {
 		// Fill the fileds with to Chrome mem.
 		fillForm();
 	} else {
-		document.getElementById("popUpContent").innerHTML = "whatever";
+		document.getElementById("popUpContent").innerText = "You must be connected to Talan Canada Portal to setup this extension.";
 	}
 }
 
