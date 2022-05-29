@@ -1,11 +1,21 @@
 console.log("1) Chargement du script contenant la fonction.");
-buildPopUpForm();
+
+
+// Once the DOM is loaded...
+window.onload = function() {
+	buildPopUpForm();
+};
+
 
 // Build the PopUp form.
 function buildPopUpForm() {
-	console.log("window : " + window);
-	console.log("window.location : " + window.location);
-	console.log("window.location.href : " + window.location.href);
+	//console.log("1)");
+	//console.log("window : " + window);
+	//console.log("2)");
+	//console.log("window.location : " + window.location);
+	//console.log("3)");
+	//console.log("window.location.href : " + window.location.href);
+	//console.log("4)");
 	if (window.location.href.includes("talan0.sharepoint.com") && 
 		window.location.href.includes("CanadaAll") && 
 		window.location.href.includes("Talan-America.aspx")){
@@ -79,5 +89,3 @@ function resetInfo() {
 	document.getElementById("userId").value = "";
 	document.getElementById("apiUrl").value = "";
 }
-
-// This is a test
