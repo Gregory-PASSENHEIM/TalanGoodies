@@ -41,7 +41,7 @@ function buildPopUpForm() {
 		currentTabs.url.includes("Talan-America.aspx")){
 		
 		// create the PopUp form.
-		document.getElementById("content").innerHTML = dynamicPopUp();
+		document.getElementById("popUpContent").innerHTML = dynamicPopUp();
 
 		// Fill the fileds with to Chrome mem.
 		fillForm();
