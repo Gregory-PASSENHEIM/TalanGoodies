@@ -12,14 +12,15 @@ function init(){
     chrome.tabs.query({currentWindow: true, active: true},function(tabs){
        currentTabs = tabs[0];
        //Now that we have the data we can proceed and do something with it
-       processTab();
+       //processTab();
+	   buildPopUpForm();
     });
 }
 
-function processTab(){
-    // Use url & currentTabs as you like
-    console.log(currentTabs);
-}
+//function processTab(){
+//    // Use url & currentTabs as you like
+//    console.log(currentTabs);
+//}
 
 
 // Management of async function
