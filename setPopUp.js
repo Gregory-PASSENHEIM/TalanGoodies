@@ -7,11 +7,14 @@ currentTabs = null;
 
 // Once the DOM is loaded...
 window.onload = function() {
-	chrome.tabs.query({active: true, lastFocusedWindow: true}, tabs => {
-		console.log("2)" + tabs[0].url)
-		currentTabs = tabs;
-	});
-	console.log("3)" + currentTabs[0].url)
+	while(currentTabs == null){
+		chrome.tabs.query({active: true, lastFocusedWindow: true}, tabs => {
+			console.log("2)" + tabs[0].url)
+			currentTabs = tabs;
+		});
+		delay(500).then(() => console.log('ran after 1 second1 passed'));
+		console.log("3)" + currentTabs[0].url)
+	}
 	buildPopUpForm();
 };
 
