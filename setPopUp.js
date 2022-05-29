@@ -19,9 +19,9 @@ window.onload = function() {
 // Build the PopUp form.
 function buildPopUpForm() {
 	console.log("currentTabs.url : " + currentTabs.url);
-	if (tabs[0].url.includes("talan0.sharepoint.com") && 
-		tabs[0].url.includes("CanadaAll") && 
-		tabs[0].url.includes("Talan-America.aspx")){
+	if (currentTabs.url.includes("talan0.sharepoint.com") && 
+		currentTabs.url.includes("CanadaAll") && 
+		currentTabs.url.includes("Talan-America.aspx")){
 		
 		// create the PopUp form.
 		document.getElementById("content").innerHTML = dynamicPopUp();
