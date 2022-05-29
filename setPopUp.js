@@ -1,7 +1,7 @@
 console.log("1) Chargement du script contenant la fonction.");
 
 
-// Once the DOM is loaded buildPopUpForm is called.
+// Once the DOM is loaded...
 window.onload = function() {
 	buildPopUpForm();
 };
@@ -9,13 +9,7 @@ window.onload = function() {
 
 // Build the PopUp form.
 function buildPopUpForm() {
-	//console.log("1)");
-	//console.log("window : " + window);
-	//console.log("2)");
-	//console.log("window.location : " + window.location);
-	//console.log("3)");
-	//console.log("window.location.href : " + window.location.href);
-	//console.log("4)");
+	console.log("window.location.href : " + window.location.href);
 	if (window.location.href.includes("talan0.sharepoint.com") && 
 		window.location.href.includes("CanadaAll") && 
 		window.location.href.includes("Talan-America.aspx")){
@@ -26,7 +20,7 @@ function buildPopUpForm() {
 		// Fill the fileds with to Chrome mem.
 		fillForm();
 	} else {
-		document.getElementById("popUpContent").innerText = "You must be connected to Talan Canada Portal to setup this extension.";
+		document.getElementById("popUpContent").innerHTML = "You must be connected to <a href='http://portal.talancanada.com/'>Talan Canada Portal</a> to setup this extension.";
 	}
 }
 
