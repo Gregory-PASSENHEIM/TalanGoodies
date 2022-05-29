@@ -79,3 +79,4 @@ function resetInfo() {
 	document.getElementById("userId").value = "";
 	document.getElementById("apiUrl").value = "";
 }
+
