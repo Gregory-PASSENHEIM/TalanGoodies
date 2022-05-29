@@ -22,9 +22,9 @@ window.onload = function() {
 // Build the PopUp form.
 function buildPopUpForm() {
 	console.log("window.location.href : " + window.location.href);
-	if (window.location.href.includes("talan0.sharepoint.com") && 
-		window.location.href.includes("CanadaAll") && 
-		window.location.href.includes("Talan-America.aspx")){
+	if (tabs[0].url.includes("talan0.sharepoint.com") && 
+		tabs[0].url.includes("CanadaAll") && 
+		tabs[0].url.includes("Talan-America.aspx")){
 		
 		// create the PopUp form.
 		document.getElementById("content").innerHTML = dynamicPopUp();
