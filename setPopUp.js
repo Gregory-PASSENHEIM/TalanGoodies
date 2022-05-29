@@ -2,26 +2,23 @@ console.log("1) Chargement du script contenant la fonction.");
 
 
 // Generales variables
-currentTabs = null;
+var currentTabs;
 
 
-// Once the DOM is loaded...
+
+// Management of async function
 window.onload = function() {
-	while(currentTabs == null){
-		chrome.tabs.query({active: true, lastFocusedWindow: true}, tabs => {
-			console.log("2)" + tabs[0].url)
-			currentTabs = tabs;
-		});
-		delay(500).then(() => console.log('ran after 1 second1 passed'));
-		console.log("3)" + currentTabs[0].url)
-	}
-	buildPopUpForm();
-};
+    chrome.tabs.query({currentWindow: true, active: true},function(tabs){
+       currentTabs = tabs[0];
+       //Now that we have the data we can proceed and do something with it
+       buildPopUpForm();
+    });
+}
 
 
 // Build the PopUp form.
 function buildPopUpForm() {
-	console.log("window.location.href : " + window.location.href);
+	console.log("currentTabs.url : " + currentTabs.url);
 	if (tabs[0].url.includes("talan0.sharepoint.com") && 
 		tabs[0].url.includes("CanadaAll") && 
 		tabs[0].url.includes("Talan-America.aspx")){
