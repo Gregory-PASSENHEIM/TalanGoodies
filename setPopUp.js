@@ -1,3 +1,4 @@
+"use strict";
 console.log("1) Chargement du script 'setPopUp.js'.");
 
 

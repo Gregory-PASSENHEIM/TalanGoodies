@@ -1,3 +1,4 @@
+"use strict";
 console.log("1) Chargement du script 'extInitScript.js'.");
 
 // Defini les scripts a ajouter.
