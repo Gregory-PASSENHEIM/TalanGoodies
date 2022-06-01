@@ -1,3 +1,6 @@
+console.log("1) Chargement du script 'addListboxesEval.js'.");
+
+
 // Globals variables déclaration
 const matieres = ["Java", "Comm.", "Vulg.", "Test01", "Test02", "Test0A", "Test0B"];
 

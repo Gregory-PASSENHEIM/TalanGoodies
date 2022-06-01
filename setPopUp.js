@@ -1,4 +1,4 @@
-console.log("1) Chargement du script contenant la fonction.");
+console.log("1) Chargement du script 'setPopUp.js'.");
 
 
 // Generales variables
