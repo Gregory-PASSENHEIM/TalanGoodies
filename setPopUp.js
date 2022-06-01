@@ -1,4 +1,3 @@
-"use strict";
 console.log("1) Chargement du script 'setPopUp.js'.");
 
 
@@ -17,21 +16,6 @@ function init(){
 	   buildPopUpForm();
     });
 }
-
-//function processTab(){
-//    // Use url & currentTabs as you like
-//    console.log(currentTabs);
-//}
-
-
-// Management of async function
-//window.onload = function() {
-//    chrome.tabs.query({currentWindow: true, active: true},function(tabs){
-//       currentTabs = tabs[0];
-//       //Now that we have the data we can proceed and do something with it
-//       buildPopUpForm();
-//    });
-//}
 
 
 // Build the PopUp form.

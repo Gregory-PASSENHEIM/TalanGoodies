@@ -1,4 +1,3 @@
-"use strict";
 console.log("1) Chargement du script 'addListboxesEval.js'.");
 
 
