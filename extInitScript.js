@@ -1,4 +1,4 @@
-//"use strict";
+15:59 01/06/2022
 console.log("1) Chargement du script 'extInitScript.js'.");
 
 /*
