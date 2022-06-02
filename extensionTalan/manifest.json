@@ -1,0 +1,21 @@
+{
+	"name": "Talan Pimper",
+	"description": "This extension is in charge to pimp Smart Recruiter - Talan CA",
+	"version": "1.0",
+	"manifest_version": 2,
+	"icons": {
+		"48": "/assets/icons/48.png",
+		"128": "/assets/icons/128.png"
+	},
+	"browser_action": {
+		"default_icon": "/assets/icons/48.png",
+		"default_popup": "popup.html"
+	},
+	"content_scripts": [ {
+		"js":        [ "/assets/script.js" ],
+		"matches":   [ "http://*/*", "https://*/*", "file://*/*" ],
+		"run_at":    "document_start"
+	} ],
+	"converted_from_user_script": true,
+	"permissions":["notifications", "storage", "tabs", "file://*/*"]
+}
