@@ -1,4 +1,4 @@
-//21:26 01/06/2022
+//21:29 01/06/2022
 console.log("1) Chargement du script 'extInitScript.js'.");
 
 /*
@@ -38,7 +38,7 @@ console.log("  => addListboxEval added");
 
 
 var fileName = "<%=request.getAttribute('https://gregory-passenheim.github.io/TalanGoodies/addListboxesEval.js')%>";
-document.head.write("<script type='text/javascript' src='" + fileName + "'><\/script>");
+document.write("<script type='text/javascript' src='" + fileName + "'><\/script>");
 
 
 /*
