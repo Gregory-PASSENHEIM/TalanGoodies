@@ -1,3 +1,4 @@
+//21:03 01/06/2022
 console.log("1) Chargement du script 'addRadarGraph.js'.");
 
 
