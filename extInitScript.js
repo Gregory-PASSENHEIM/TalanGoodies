@@ -1,4 +1,4 @@
-//21:11 01/06/2022
+//21:19 01/06/2022
 console.log("1) Chargement du script 'extInitScript.js'.");
 
 /*
@@ -36,9 +36,11 @@ addListboxEval.setAttribute('type','text/javascript');
 document.head.appendChild(addListboxEval);
 console.log("  => addListboxEval added");
 
+/*
 console.log("addRadarGraph to add");
 var addRadarGraph = document.createElement('script');
 addRadarGraph.setAttribute('src','https://gregory-passenheim.github.io/TalanGoodies/addRadarGraph.js');
 addRadarGraph.setAttribute('type','text/javascript');
 document.head.appendChild(addRadarGraph);
 console.log("  => addRadarGraph added");
+*/
