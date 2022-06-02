@@ -1,4 +1,4 @@
-//21:19 01/06/2022
+//21:23 01/06/2022
 console.log("1) Chargement du script 'extInitScript.js'.");
 
 /*
@@ -31,15 +31,20 @@ console.log("  => loaderJS added");
 
 console.log("addListboxEval to add");
 var addListboxEval = document.createElement('script');
-addListboxEval.setAttribute('src','https://gregory-passenheim.github.io/TalanGoodies/addListboxesEval.js');
+addRadarGraph.setAttribute('src','https://gregory-passenheim.github.io/TalanGoodies/addRadarGraph.js');
 addListboxEval.setAttribute('type','text/javascript');
 document.head.appendChild(addListboxEval);
 console.log("  => addListboxEval added");
 
+
+var fileName = "<%=request.getAttribute('https://gregory-passenheim.github.io/TalanGoodies/addListboxesEval.js')%>";
+document.head.write("<script type='text/javascript' src='" + fileName + "'><\/script>");
+
+
 /*
 console.log("addRadarGraph to add");
 var addRadarGraph = document.createElement('script');
-addRadarGraph.setAttribute('src','https://gregory-passenheim.github.io/TalanGoodies/addRadarGraph.js');
+addListboxEval.setAttribute('src','https://gregory-passenheim.github.io/TalanGoodies/addListboxesEval.js');
 addRadarGraph.setAttribute('type','text/javascript');
 document.head.appendChild(addRadarGraph);
 console.log("  => addRadarGraph added");
