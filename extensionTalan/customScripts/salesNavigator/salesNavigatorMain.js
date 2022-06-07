@@ -1,4 +1,4 @@
-//20:43 06/06/2022
+//21:24 06/06/2022
 console.log("1) Chargement du script 'salesNavigatorAddOns.js'.");
 
 
@@ -67,6 +67,6 @@ console.log("4)");
 // Desc     : Create a dynamic HTML sctring
 // return   : HTML string representing the Select Box.
 function buildExportButton(value) {
-	myInnerHTML = "<div><button id="save">Export</button></div>";
+	myInnerHTML = "<div><button id='save'>Export</button></div>";
 	return myInnerHTML;
 }
