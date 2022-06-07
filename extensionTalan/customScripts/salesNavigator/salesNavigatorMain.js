@@ -3,7 +3,8 @@ console.log("1) Chargement du script 'salesNavigatorAddOns.js'.");
 
 
 // General Var.
-keyWord = "https://www.linkedin.com/sales/";
+//keyWord = "https://www.linkedin.com/sales/";
+keyWord = "https://static-exp2.licdn.com/";
 
 
 // Init
