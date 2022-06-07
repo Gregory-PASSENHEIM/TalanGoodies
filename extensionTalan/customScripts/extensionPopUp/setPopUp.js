@@ -32,7 +32,7 @@ function buildPopUpForm() {
 		// Fill the fileds with to Chrome mem.
 		fillForm();
 	} else {
-		document.getElementById("popUpContent").innerHTML = "You must be connected to <a href='http://portal.talancanada.com/'>Talan Canada Portal</a> to setup this extension.";
+		document.getElementById("popUpContent").innerHTML = "You must be connected to <BR>Talan Canada Portal</BR> to setup this extension.";
 	}
 }
 
