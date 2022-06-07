@@ -39,13 +39,19 @@ var repeat_AddExportButton = true;
 function addExportButton(event) {
 
 	// Add Radar Graph on the SR Profile.
+console.log("1)");
 	if (document.getElementsByTagName("header") !== null){
+console.log("2)");
 		if (document.getElementsByTagName("header")[0] !== null){
+console.log("3)");
 			repeat_AddExportButton = false;
+console.log("4)");
 
+			/*
 			// Generate the html of the table added in the evaluation part
 			var candidateEval = document.getElementById("st-reviewRating").parentElement.parentElement;
 			candidateEval.innerHTML = buildTableArea_02(candidateEval.innerHTML);
+			*/
 		}
 	}
 	// If the key word is not found : retry in 1 second.
