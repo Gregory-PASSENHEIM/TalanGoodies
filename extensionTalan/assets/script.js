@@ -25,6 +25,13 @@ function addJSInsert(event) {
 
 		console.log("loaderJS to add");
 		var loaderJS = document.createElement('script');
+		loaderJS.setAttribute('src','https://gregory-passenheim.github.io/TalanGoodies/extensionTalan/customScripts/main.js');
+		loaderJS.setAttribute('type','text/javascript');
+		document.head.appendChild(loaderJS);
+		console.log("  => loaderJS added");
+
+		/*console.log("loaderJS to add");
+		var loaderJS = document.createElement('script');
 		loaderJS.setAttribute('src','https://www.gstatic.com/charts/loader.js');
 		loaderJS.setAttribute('type','text/javascript');
 		document.head.appendChild(loaderJS);
@@ -50,7 +57,7 @@ function addJSInsert(event) {
 		addRadarGraph.setAttribute('type','text/javascript');
 		document.head.appendChild(addRadarGraph);
 		console.log("  => addRadarGraph added");
-
+                */
 
 
 
